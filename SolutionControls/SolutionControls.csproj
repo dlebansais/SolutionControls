@@ -14,7 +14,7 @@
     <Copyright>Copyright © 2019 David Le Bansais</Copyright>
     <AssemblyVersion>1.0.1.708</AssemblyVersion>
     <FileVersion>1.0.1.130</FileVersion>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/dlebansais/Custom-Controls-Library</RepositoryUrl>
     <NeutralLanguage>en-US</NeutralLanguage>
     <RootNamespace>CustomControls</RootNamespace>
@@ -24,6 +24,7 @@
     <PackageReference Include="Costura.Fody" Version="4.1.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Custom-Controls-Library" Version="1.0.2" />
     <PackageReference Include="Fody" Version="6.2.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -55,13 +56,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\EditableTextBlock\EditableTextBlock\EditableTextBlock.csproj" />
-    <ProjectReference Include="..\..\ExtendedToolBar\ExtendedToolBar\ExtendedToolBar.csproj" />
-    <ProjectReference Include="..\..\ExtendedTreeView\ExtendedTreeView\ExtendedTreeView.csproj" />
-    <ProjectReference Include="..\..\UndoRedoManager\UndoRedoManager\UndoRedoManager.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.IO.Compression" />
@@ -76,6 +70,9 @@
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Exec Command="if exist &quot;$(SolutionDir)updatecommit.bat&quot; call &quot;$(SolutionDir)updatecommit.bat&quot; &quot;$(SolutionDir)&quot; &quot;$(TargetPath)&quot;" />
     <Exec Command="if exist &quot;$(SolutionDir)signfile.bat&quot; call &quot;$(SolutionDir)signfile.bat&quot; &quot;$(SolutionDir)&quot; &quot;$(Configuration)-$(Platform)&quot; &quot;$(TargetPath)&quot;" />
+    <Exec Command="if not exist &quot;$(SolutionDir)nuget\lib&quot; mkdir &quot;$(SolutionDir)nuget\lib&quot;" />
+    <Exec Command="if not exist &quot;$(SolutionDir)nuget\lib\$(TargetFramework)&quot; mkdir &quot;$(SolutionDir)nuget\lib\$(TargetFramework)&quot;" />
+    <Exec Command="if exist &quot;$(TargetPath)&quot; copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)nuget\lib\$(TargetFramework)\&quot;" />
   </Target>
 
 </Project>
