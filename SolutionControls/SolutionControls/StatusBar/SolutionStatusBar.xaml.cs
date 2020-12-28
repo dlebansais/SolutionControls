@@ -50,9 +50,9 @@
         #endregion
         #region Active Status List
         /// <summary>
-        /// Identifies the <see cref="ActiveStatusList"/> attached property.
+        /// Gets the <see cref="ActiveStatusList"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty ActiveStatusListProperty = ActiveStatusListPropertyKey.DependencyProperty;
+        public static DependencyProperty ActiveStatusListProperty { get { return ActiveStatusListPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey ActiveStatusListPropertyKey = DependencyProperty.RegisterReadOnly("ActiveStatusList", typeof(IReadOnlyCollection<IApplicationStatus>), typeof(SolutionStatusBar), new PropertyMetadata(null));
 
         /// <summary>
@@ -65,9 +65,9 @@
         #endregion
         #region Current Status
         /// <summary>
-        /// Identifies the <see cref="CurrentStatus"/> attached property.
+        /// Gets the <see cref="CurrentStatus"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty CurrentStatusProperty = CurrentStatusPropertyKey.DependencyProperty;
+        public static DependencyProperty CurrentStatusProperty { get { return CurrentStatusPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey CurrentStatusPropertyKey = DependencyProperty.RegisterReadOnly("CurrentStatus", typeof(IApplicationStatus), typeof(SolutionStatusBar), new PropertyMetadata(null));
 
         /// <summary>

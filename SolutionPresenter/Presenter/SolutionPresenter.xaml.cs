@@ -44,9 +44,9 @@
         #endregion
         #region Document Types
         /// <summary>
-        /// Identifies the <see cref="DocumentTypes"/> attached property.
+        /// Gets the <see cref="DocumentTypes"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty DocumentTypesProperty = DocumentTypesPropertyKey.DependencyProperty;
+        public static DependencyProperty DocumentTypesProperty { get { return DocumentTypesPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey DocumentTypesPropertyKey = DependencyProperty.RegisterReadOnly("DocumentTypes", typeof(DocumentTypeCollection), typeof(SolutionPresenter), new PropertyMetadata(null));
 
         /// <summary>
@@ -69,9 +69,9 @@
         #endregion
         #region Open Documents
         /// <summary>
-        /// Identifies the <see cref="OpenDocuments"/> attached property.
+        /// Gets the <see cref="OpenDocuments"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty OpenDocumentsProperty = OpenDocumentsPropertyKey.DependencyProperty;
+        public static DependencyProperty OpenDocumentsProperty { get { return OpenDocumentsPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey OpenDocumentsPropertyKey = DependencyProperty.RegisterReadOnly("OpenDocuments", typeof(ICollection<IDocument>), typeof(SolutionPresenter), new PropertyMetadata(null));
 
         /// <summary>
@@ -236,9 +236,9 @@
         #endregion
         #region Root Path
         /// <summary>
-        /// Identifies the <see cref="RootPath"/> attached property.
+        /// Gets the <see cref="RootPath"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty RootPathProperty = RootPathPropertyKey.DependencyProperty;
+        public static DependencyProperty RootPathProperty { get { return RootPathPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey RootPathPropertyKey = DependencyProperty.RegisterReadOnly("RootPath", typeof(IRootPath), typeof(SolutionPresenter), new PropertyMetadata(new EmptyPath()));
 
         /// <summary>
@@ -251,9 +251,9 @@
         #endregion
         #region Root Properties
         /// <summary>
-        /// Identifies the <see cref="RootProperties"/> attached property.
+        /// Gets the <see cref="RootProperties"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty RootPropertiesProperty = RootPropertiesPropertyKey.DependencyProperty;
+        public static DependencyProperty RootPropertiesProperty { get { return RootPropertiesPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey RootPropertiesPropertyKey = DependencyProperty.RegisterReadOnly("RootProperties", typeof(IRootProperties), typeof(SolutionPresenter), new PropertyMetadata(null));
 
         /// <summary>
@@ -266,9 +266,9 @@
         #endregion
         #region Option Pages
         /// <summary>
-        /// Identifies the <see cref="OptionPages"/> attached property.
+        /// Gets the <see cref="OptionPages"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty OptionPagesProperty = OptionPagesPropertyKey.DependencyProperty;
+        public static DependencyProperty OptionPagesProperty { get { return OptionPagesPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey OptionPagesPropertyKey = DependencyProperty.RegisterReadOnly("OptionPages", typeof(ICollection<TabItem>), typeof(SolutionPresenter), new PropertyMetadata(null));
 
         /// <summary>
@@ -290,9 +290,9 @@
         #endregion
         #region Is Loading Tree
         /// <summary>
-        /// Identifies the <see cref="IsLoadingTree"/> attached property.
+        /// Gets the <see cref="IsLoadingTree"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty IsLoadingTreeProperty = IsLoadingTreePropertyKey.DependencyProperty;
+        public static DependencyProperty IsLoadingTreeProperty { get { return IsLoadingTreePropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey IsLoadingTreePropertyKey = DependencyProperty.RegisterReadOnly("IsLoadingTree", typeof(bool), typeof(SolutionPresenter), new PropertyMetadata(false));
 
         /// <summary>
@@ -305,9 +305,9 @@
         #endregion
         #region Tree Node Comparer
         /// <summary>
-        /// Identifies the <see cref="TreeNodeComparer"/> attached property.
+        /// Gets the <see cref="TreeNodeComparer"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty TreeNodeComparerProperty = TreeNodeComparerPropertyKey.DependencyProperty;
+        public static DependencyProperty TreeNodeComparerProperty { get { return TreeNodeComparerPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey TreeNodeComparerPropertyKey = DependencyProperty.RegisterReadOnly("TreeNodeComparer", typeof(IComparer<ITreeNodePath>), typeof(SolutionPresenter), new PropertyMetadata(null));
 
         /// <summary>
@@ -1250,9 +1250,9 @@
         #endregion
         #region Document Import Descriptors
         /// <summary>
-        /// Identifies the <see cref="DocumentImportDescriptors"/> attached property.
+        /// Gets the <see cref="DocumentImportDescriptors"/> attached property.
         /// </summary>
-        public static readonly DependencyProperty DocumentImportDescriptorsProperty = DocumentImportDescriptorsPropertyKey.DependencyProperty;
+        public static DependencyProperty DocumentImportDescriptorsProperty { get { return DocumentImportDescriptorsPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey DocumentImportDescriptorsPropertyKey = DependencyProperty.RegisterReadOnly("DocumentImportDescriptors", typeof(ICollection<IDocumentImportDescriptor>), typeof(SolutionPresenter), new PropertyMetadata(null));
 
         /// <summary>

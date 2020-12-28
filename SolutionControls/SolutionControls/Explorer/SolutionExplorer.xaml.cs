@@ -40,9 +40,9 @@
         #endregion
         #region Root Path
         /// <summary>
-        /// Identifies the <see cref="RootPath"/> dependency property.
+        /// Gets the <see cref="RootPath"/> dependency property.
         /// </summary>
-        public static readonly DependencyProperty RootPathProperty = RootPathPropertyKey.DependencyProperty;
+        public static DependencyProperty RootPathProperty { get { return RootPathPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey RootPathPropertyKey = DependencyProperty.RegisterReadOnly("RootPath", typeof(IRootPath), typeof(SolutionExplorer), new PropertyMetadata(null));
 
         /// <summary>
@@ -55,9 +55,9 @@
         #endregion
         #region Root Properties
         /// <summary>
-        /// Identifies the <see cref="RootProperties"/> dependency property.
+        /// Gets the <see cref="RootProperties"/> dependency property.
         /// </summary>
-        public static readonly DependencyProperty RootPropertiesProperty = RootPropertiesPropertyKey.DependencyProperty;
+        public static DependencyProperty RootPropertiesProperty { get { return RootPropertiesPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey RootPropertiesPropertyKey = DependencyProperty.RegisterReadOnly("RootProperties", typeof(IRootProperties), typeof(SolutionExplorer), new PropertyMetadata(null));
 
         /// <summary>
@@ -70,9 +70,9 @@
         #endregion
         #region Tree Node Comparer
         /// <summary>
-        /// Identifies the <see cref="TreeNodeComparer"/> dependency property.
+        /// Gets the <see cref="TreeNodeComparer"/> dependency property.
         /// </summary>
-        public static readonly DependencyProperty TreeNodeComparerProperty = TreeNodeComparerPropertyKey.DependencyProperty;
+        public static DependencyProperty TreeNodeComparerProperty { get { return TreeNodeComparerPropertyKey.DependencyProperty; } }
         private static readonly DependencyPropertyKey TreeNodeComparerPropertyKey = DependencyProperty.RegisterReadOnly("TreeNodeComparer", typeof(IComparer<ITreeNodePath>), typeof(SolutionExplorer), new PropertyMetadata(null));
 
         /// <summary>
