@@ -137,6 +137,7 @@
                 }
             }
         }
+
         private bool IsDirtyInternal;
 
         /// <summary>

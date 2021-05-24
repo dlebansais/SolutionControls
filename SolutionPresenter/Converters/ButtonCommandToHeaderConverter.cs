@@ -53,6 +53,7 @@
                         string CommandTextFormat = AsActiveDocumentCommand.MenuHeader;
                         ItemHeader = string.Format(CultureInfo.CurrentCulture, CommandTextFormat, activeDocument.Path.HeaderName);
                     }
+
                     break;
 
                 case ExtendedRoutedCommand AsExtendedRoutedCommand:

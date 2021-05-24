@@ -196,6 +196,7 @@
                 }
             }
         }
+
         private bool HasCaretInternal;
 
         /// <summary>
@@ -213,6 +214,7 @@
                 }
             }
         }
+
         private int CaretLineInternal;
 
         /// <summary>
@@ -230,6 +232,7 @@
                 }
             }
         }
+
         private int CaretColumnInternal;
 
         /// <summary>
@@ -247,6 +250,7 @@
                 }
             }
         }
+
         private bool IsCaretOverrideInternal;
         #endregion
 

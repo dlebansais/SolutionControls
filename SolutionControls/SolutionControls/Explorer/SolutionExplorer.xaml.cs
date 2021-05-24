@@ -403,6 +403,7 @@
                 }
             }
         }
+
         private ISolutionRoot? RootInternal;
 
         /// <summary>
@@ -1011,6 +1012,7 @@
                                     Result.Add(Child.Path, new PathConnection((IFolderPath)ParentFolder.Path, Child.Properties, treeviewSolutionExplorer.IsExpanded(Child)));
                                 break;
                             }
+
                         break;
                 }
 

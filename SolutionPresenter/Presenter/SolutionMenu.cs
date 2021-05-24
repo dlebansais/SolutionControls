@@ -11,7 +11,7 @@
         FileMenu,
 
         /// <summary>
-        /// The File toolbar
+        /// The File toolbar.
         /// </summary>
         FileToolBar,
 

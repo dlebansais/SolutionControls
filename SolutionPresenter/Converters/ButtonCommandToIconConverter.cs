@@ -61,6 +61,7 @@
                     {
                         throw new ArgumentOutOfRangeException(nameof(command));
                     }
+
                     break;
 
                 default:

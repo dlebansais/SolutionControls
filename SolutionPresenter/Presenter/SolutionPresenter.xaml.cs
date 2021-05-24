@@ -425,8 +425,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionTreeCommitted
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionTreeCommittedEvent, value); SolutionTreeCommittedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionTreeCommittedEvent, value); SolutionTreeCommittedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -462,8 +464,10 @@
         /// </summary>
         public event RoutedEventHandler FolderEnumerated
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(FolderEnumeratedEvent, value); FolderEnumeratedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(FolderEnumeratedEvent, value); FolderEnumeratedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -499,8 +503,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionTreeLoaded
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionTreeLoadedEvent, value); SolutionTreeLoadedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionTreeLoadedEvent, value); SolutionTreeLoadedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -525,8 +531,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionSelected
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionSelectedEvent, value); SolutionSelectedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionSelectedEvent, value); SolutionSelectedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -557,8 +565,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionCreated
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionCreatedEvent, value); SolutionCreatedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionCreatedEvent, value); SolutionCreatedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -589,8 +599,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionOpened
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionOpenedEvent, value); SolutionOpenedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionOpenedEvent, value); SolutionOpenedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -622,8 +634,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionClosed
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionClosedEvent, value); SolutionClosedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionClosedEvent, value); SolutionClosedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -657,8 +671,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionDeleted
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionDeletedEvent, value); SolutionDeletedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionDeletedEvent, value); SolutionDeletedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -691,8 +707,10 @@
         /// </summary>
         public event RoutedEventHandler SolutionExported
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(SolutionExportedEvent, value); SolutionExportedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(SolutionExportedEvent, value); SolutionExportedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -740,8 +758,10 @@
         /// </summary>
         public event RoutedEventHandler FolderCreated
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(FolderCreatedEvent, value); FolderCreatedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(FolderCreatedEvent, value); FolderCreatedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -770,8 +790,10 @@
         /// </summary>
         public event RoutedEventHandler NodePasted
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(NodePastedEvent, value); NodePastedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(NodePastedEvent, value); NodePastedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -803,8 +825,10 @@
         /// </summary>
         public event RoutedEventHandler NodeRenamed
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(NodeRenamedEvent, value); NodeRenamedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(NodeRenamedEvent, value); NodeRenamedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -834,8 +858,10 @@
         /// </summary>
         public event RoutedEventHandler NodeMoved
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(NodeMovedEvent, value); NodeMovedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(NodeMovedEvent, value); NodeMovedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -865,8 +891,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentCreated
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentCreatedEvent, value); DocumentCreatedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentCreatedEvent, value); DocumentCreatedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -894,8 +922,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentSelected
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentSelectedEvent, value); DocumentSelectedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentSelectedEvent, value); DocumentSelectedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -926,8 +956,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentAdded
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentAddedEvent, value); DocumentAddedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentAddedEvent, value); DocumentAddedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -962,8 +994,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentOpened
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentOpenedEvent, value); DocumentOpenedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentOpenedEvent, value); DocumentOpenedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -999,8 +1033,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentClosed
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentClosedEvent, value); DocumentClosedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentClosedEvent, value); DocumentClosedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1049,8 +1085,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentSaved
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentSavedEvent, value); DocumentSavedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentSavedEvent, value); DocumentSavedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1084,8 +1122,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentRemoved
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentRemovedEvent, value); DocumentRemovedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentRemovedEvent, value); DocumentRemovedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1120,8 +1160,10 @@
         /// </summary>
         public event RoutedEventHandler DocumentExported
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(DocumentExportedEvent, value); DocumentExportedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(DocumentExportedEvent, value); DocumentExportedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1169,8 +1211,10 @@
         /// </summary>
         public event RoutedEventHandler ErrorFocused
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(ErrorFocusedEvent, value); ErrorFocusedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(ErrorFocusedEvent, value); ErrorFocusedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1203,8 +1247,10 @@
         /// </summary>
         public event RoutedEventHandler AddNewItemsRequested
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(AddNewItemsRequestedEvent, value); AddNewItemsRequestedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(AddNewItemsRequestedEvent, value); AddNewItemsRequestedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1313,8 +1359,10 @@
         /// </summary>
         public event RoutedEventHandler ImportNewItemsRequested
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(ImportNewItemsRequestedEvent, value); ImportNewItemsRequestedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(ImportNewItemsRequestedEvent, value); ImportNewItemsRequestedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1347,8 +1395,10 @@
         /// </summary>
         public event RoutedEventHandler BuildSolutionRequested
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(BuildSolutionRequestedEvent, value); BuildSolutionRequestedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(BuildSolutionRequestedEvent, value); BuildSolutionRequestedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1402,8 +1452,10 @@
         /// </summary>
         public event RoutedEventHandler RootPropertiesRequested
         {
+#pragma warning disable SA1107 // Code should not contain multiple statements on one line
             add { AddHandler(RootPropertiesRequestedEvent, value); RootPropertiesRequestedEventArgs.IncrementHandlerCount(); }
             remove { RemoveHandler(RootPropertiesRequestedEvent, value); RootPropertiesRequestedEventArgs.DecrementHandlerCount(); }
+#pragma warning restore SA1107 // Code should not contain multiple statements on one line
         }
 
         /// <summary>
@@ -1987,11 +2039,13 @@
         protected virtual void RemoveDocumentCommandBindings()
         {
             List<CommandBinding> ToRemove = new List<CommandBinding>();
+
             foreach (CommandBinding Binding in CommandBindings)
             {
                 if (Binding.Command is DocumentRoutedCommand)
                     ToRemove.Add(Binding);
             }
+
             foreach (CommandBinding Binding in ToRemove)
                 CommandBindings.Remove(Binding);
         }
@@ -5488,6 +5542,7 @@
                         else
                             return null;
                     }
+
                     break;
 
                 case ILayoutContainer AsContainer:

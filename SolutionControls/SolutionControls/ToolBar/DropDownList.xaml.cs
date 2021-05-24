@@ -39,6 +39,7 @@
                 }
             }
         }
+
         private ObservableCollection<IReversibleOperation> AssociatedListInternal = new ObservableCollection<IReversibleOperation>();
 
         /// <summary>
