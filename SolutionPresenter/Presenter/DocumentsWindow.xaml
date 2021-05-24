@@ -1,8 +1,6 @@
 ﻿<Window x:Class="SolutionPresenter.DocumentsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        xmlns:conv="clr-namespace:Converters"
         xmlns:ctrl="CustomControlsLibrary"
         xmlns:res="clr-namespace:SolutionPresenterInternal.Properties"
         Title="{Binding Source={x:Static res:Resources.Windows}}"

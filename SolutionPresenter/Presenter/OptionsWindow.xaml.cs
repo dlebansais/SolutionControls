@@ -6,7 +6,6 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
-    using CustomControls;
 
     /// <summary>
     /// Represents the window for options of a solution.
@@ -31,6 +30,7 @@
             DataContext = this;
 
             Loaded += OnLoaded;
+            Closing += OnClosing;
 
             List<TabItem> TemplateList = new List<TabItem>();
             BackupTable = new Dictionary<IOptionPageDataContext, IOptionPageDataContext>();
@@ -93,7 +93,7 @@
         /// Gets a dummy object.
         /// Don't remove this, it forces the load of the corresponding assembly. Otherwise, an exception is thrown before this window is displayed.
         /// </summary>
-        public TightfittingTabControl? UnusedCtrl { get; }
+        public CustomControls.TightfittingTabControl? UnusedCtrl { get; }
         #endregion
 
         #region Events

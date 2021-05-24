@@ -1,7 +1,7 @@
 ﻿namespace SolutionPresenter
 {
-    using SolutionControls;
     using System.Collections.Generic;
+    using SolutionControls;
 
     /// <summary>
     /// Represents information used to commiy changes.

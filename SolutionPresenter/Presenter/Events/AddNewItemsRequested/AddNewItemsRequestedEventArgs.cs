@@ -1,8 +1,8 @@
 ﻿namespace SolutionPresenter
 {
-    using SolutionControls;
     using System.Collections.Generic;
     using System.Windows;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for an add new items request event.

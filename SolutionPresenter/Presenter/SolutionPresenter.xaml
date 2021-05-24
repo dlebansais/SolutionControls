@@ -1,9 +1,8 @@
 ﻿<UserControl x:Class="SolutionPresenter.SolutionPresenter"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:spc="clr-namespace:CustomControls"
+             xmlns:spc="clr-namespace:SolutionPresenter"
              xmlns:res="clr-namespace:SolutionPresenterInternal.Properties"
-             xmlns:ctrl="CustomControlsLibrary"
              xmlns:solutionCtrl="clr-namespace:SolutionControls;assembly=SolutionControls"
              xmlns:avl="clr-namespace:Xceed.Wpf.AvalonDock;assembly=Xceed.Wpf.AvalonDock"
              xmlns:avlcontrol="clr-namespace:Xceed.Wpf.AvalonDock.Controls;assembly=Xceed.Wpf.AvalonDock"
@@ -72,7 +71,6 @@
                 <CommandBinding Command="ApplicationCommands.Redo" CanExecute="CanRedo" Executed="OnRedo"/>
                 <CommandBinding Command="ApplicationCommands.Delete" CanExecute="CanDelete" Executed="OnDelete"/>
                 <CommandBinding Command="ApplicationCommands.SelectAll" CanExecute="CanSelectAll" Executed="OnSelectAll"/>
-                <CommandBinding Command="{StaticResource ChangeOptionsCommand}" CanExecute="CanChangeOptions" Executed="OnChangeOptions"/>
                 <CommandBinding Command="{StaticResource BuildSolutionCommand}" CanExecute="CanBuildSolution" Executed="OnBuildSolution"/>
                 <CommandBinding Command="{StaticResource ChangePropertiesCommand}" CanExecute="CanChangeProperties" Executed="OnChangeProperties"/>
                 <CommandBinding Command="{StaticResource ShowSolutionExplorerToolCommand}" CanExecute="CanShowSolutionExplorerTool" Executed="OnShowSolutionExplorerTool"/>

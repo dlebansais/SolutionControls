@@ -22,6 +22,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Presenter\OptionsWindow2.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
@@ -46,10 +50,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Include="Presenter\OptionsWindow.xaml" />
     <Page Include="Presenter\DocumentsWindow.xaml" />
     <Page Include="Presenter\SolutionPresenter.xaml" />
     <Page Include="Presenter\SaveAllWindow.xaml" />
-    <Page Include="Presenter\OptionsWindow.xaml" />
   </ItemGroup>
 
   <ItemGroup>

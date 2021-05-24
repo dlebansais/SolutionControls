@@ -1,7 +1,7 @@
-﻿using SolutionControls;
-
-namespace SolutionPresenter
+﻿namespace SolutionPresenter
 {
+    using SolutionControls;
+
     /// <summary>
     /// Represents a context for the <see cref="AddNewItemsRequestedEventArgs"/> event data.
     /// </summary>

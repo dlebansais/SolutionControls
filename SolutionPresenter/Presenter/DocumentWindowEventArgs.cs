@@ -1,7 +1,7 @@
 ﻿namespace SolutionPresenter
 {
-    using SolutionControls;
     using System;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for an event on a document window.

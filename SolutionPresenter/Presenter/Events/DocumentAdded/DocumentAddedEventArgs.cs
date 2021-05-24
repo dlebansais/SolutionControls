@@ -1,9 +1,9 @@
 ﻿namespace SolutionPresenter
 {
-    using SolutionControls;
     using System.Collections.Generic;
     using System.Windows;
     using System.Windows.Threading;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for document added event.

@@ -6,8 +6,7 @@
         xmlns:ctrl="CustomControlsLibrary"
         ResizeMode="NoResize"
         SizeToContent="WidthAndHeight"
-        WindowStartupLocation="CenterOwner"
-        Closing="OnClosing">
+        WindowStartupLocation="CenterOwner">
     <Window.Resources>
         <TabItem x:Key="PageTheme" Header="{Binding Source={x:Static res:Resources.Theme}}" Loaded="OnThemePageLoaded">
             <DockPanel VerticalAlignment="Top">

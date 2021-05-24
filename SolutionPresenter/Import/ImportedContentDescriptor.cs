@@ -1,7 +1,7 @@
-﻿using SolutionControls;
-
-namespace SolutionPresenter
+﻿namespace SolutionPresenter
 {
+    using SolutionControls;
+
     /// <summary>
     /// Represents the content of an imported object.
     /// </summary>
