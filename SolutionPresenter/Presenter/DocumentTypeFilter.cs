@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     /// <summary>
     /// Represents a filter for selecting documents by type.

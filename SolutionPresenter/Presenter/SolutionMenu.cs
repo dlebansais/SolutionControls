@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     /// <summary>
     /// Specifies a menu or toolbar.

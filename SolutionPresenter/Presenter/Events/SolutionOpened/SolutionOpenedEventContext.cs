@@ -1,5 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
+    using SolutionControls;
+
     /// <summary>
     /// Represents a context for the <see cref="SolutionOpenedEventArgs"/> event data.
     /// </summary>

@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System.Collections.Generic;
 
@@ -68,7 +68,7 @@
         /// <summary>
         /// Gets the flat list of child folders.
         /// </summary>
-        public override IExtendedTreeNodeCollection Children { get { return ChildrenInternal; } }
+        public override CustomControls.IExtendedTreeNodeCollection Children { get { return ChildrenInternal; } }
         private ISolutionTreeNodeCollection ChildrenInternal = new SolutionTreeNodeCollection();
 
         /// <summary>

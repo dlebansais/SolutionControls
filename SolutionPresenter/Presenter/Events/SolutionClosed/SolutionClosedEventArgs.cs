@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Windows;
 

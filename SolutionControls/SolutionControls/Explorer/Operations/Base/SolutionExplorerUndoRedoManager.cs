@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using UndoRedo;
 

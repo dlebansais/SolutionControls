@@ -1,4 +1,6 @@
-﻿namespace CustomControls
+﻿using SolutionControls;
+
+namespace SolutionPresenter
 {
     /// <summary>
     /// Represents a context for the <see cref="AddNewItemsRequestedEventArgs"/> event data.

@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreBuild", "PreBuild\PreBuild.csproj", "{41CA90AE-DD39-48A2-9A91-D9278A154501}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test-SolutionControls", "Test\Test-SolutionControls\Test-SolutionControls.csproj", "{688A5E56-0927-4D77-A26A-B3FBDE816CBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -35,6 +37,10 @@ Global
 		{41CA90AE-DD39-48A2-9A91-D9278A154501}.Debug|x64.Build.0 = Debug|x64
 		{41CA90AE-DD39-48A2-9A91-D9278A154501}.Release|x64.ActiveCfg = Release|x64
 		{41CA90AE-DD39-48A2-9A91-D9278A154501}.Release|x64.Build.0 = Release|x64
+		{688A5E56-0927-4D77-A26A-B3FBDE816CBD}.Debug|x64.ActiveCfg = Debug|x64
+		{688A5E56-0927-4D77-A26A-B3FBDE816CBD}.Debug|x64.Build.0 = Debug|x64
+		{688A5E56-0927-4D77-A26A-B3FBDE816CBD}.Release|x64.ActiveCfg = Release|x64
+		{688A5E56-0927-4D77-A26A-B3FBDE816CBD}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

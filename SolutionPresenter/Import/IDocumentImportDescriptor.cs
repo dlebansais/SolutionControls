@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     /// <summary>
     /// Represents a descriptor of documents during import.

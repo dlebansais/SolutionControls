@@ -17,8 +17,88 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/dlebansais/Custom-Controls-Library</RepositoryUrl>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <RootNamespace>CustomControls</RootNamespace>
+    <RootNamespace>SolutionControlsInternal</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Icons\About.png" />
+    <None Remove="Resources\Icons\AddExistingItem.png" />
+    <None Remove="Resources\Icons\BuildSolution.png" />
+    <None Remove="Resources\Icons\Close.png" />
+    <None Remove="Resources\Icons\CloseSolution.png" />
+    <None Remove="Resources\Icons\CompilerOutput.png" />
+    <None Remove="Resources\Icons\Copy.png" />
+    <None Remove="Resources\Icons\Cut.png" />
+    <None Remove="Resources\Icons\Delete.png" />
+    <None Remove="Resources\Icons\DeleteSolution.png" />
+    <None Remove="Resources\Icons\Exit.png" />
+    <None Remove="Resources\Icons\Export.png" />
+    <None Remove="Resources\Icons\ExportAll.png" />
+    <None Remove="Resources\Icons\ExportSolution.png" />
+    <None Remove="Resources\Icons\Folder.png" />
+    <None Remove="Resources\Icons\Import.png" />
+    <None Remove="Resources\Icons\ImportSolution.png" />
+    <None Remove="Resources\Icons\NewFolder.png" />
+    <None Remove="Resources\Icons\NewSolution.png" />
+    <None Remove="Resources\Icons\Open.png" />
+    <None Remove="Resources\Icons\OpenExisting.png" />
+    <None Remove="Resources\Icons\OpenSolution.png" />
+    <None Remove="Resources\Icons\Options.png" />
+    <None Remove="Resources\Icons\Paste.png" />
+    <None Remove="Resources\Icons\Properties.png" />
+    <None Remove="Resources\Icons\Redo.png" />
+    <None Remove="Resources\Icons\Rename.png" />
+    <None Remove="Resources\Icons\Save.png" />
+    <None Remove="Resources\Icons\SaveAll.png" />
+    <None Remove="Resources\Icons\SelectAll.png" />
+    <None Remove="Resources\Icons\SolutionExplorer.png" />
+    <None Remove="Resources\Icons\Split.png" />
+    <None Remove="Resources\Icons\Undo.png" />
+    <None Remove="SolutionControls\Explorer\ExplorerCommands.xaml" />
+    <None Remove="SolutionControls\Explorer\ExplorerResources.xaml" />
+    <None Remove="SolutionControls\ToolBar\ToolBarCommands.xaml" />
+    <None Remove="SolutionControls\ToolBar\ToolBarResources.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icons\About.png" />
+    <Resource Include="Resources\Icons\AddExistingItem.png" />
+    <Resource Include="Resources\Icons\BuildSolution.png" />
+    <Resource Include="Resources\Icons\Close.png" />
+    <Resource Include="Resources\Icons\CloseSolution.png" />
+    <Resource Include="Resources\Icons\CompilerOutput.png" />
+    <Resource Include="Resources\Icons\Copy.png" />
+    <Resource Include="Resources\Icons\Cut.png" />
+    <Resource Include="Resources\Icons\Delete.png" />
+    <Resource Include="Resources\Icons\DeleteSolution.png" />
+    <Resource Include="Resources\Icons\Exit.png" />
+    <Resource Include="Resources\Icons\Export.png" />
+    <Resource Include="Resources\Icons\ExportAll.png" />
+    <Resource Include="Resources\Icons\ExportSolution.png" />
+    <Resource Include="Resources\Icons\Folder.png" />
+    <Resource Include="Resources\Icons\Import.png" />
+    <Resource Include="Resources\Icons\ImportSolution.png" />
+    <Resource Include="Resources\Icons\NewFolder.png" />
+    <Resource Include="Resources\Icons\NewSolution.png" />
+    <Resource Include="Resources\Icons\Open.png" />
+    <Resource Include="Resources\Icons\OpenExisting.png" />
+    <Resource Include="Resources\Icons\OpenSolution.png" />
+    <Resource Include="Resources\Icons\Options.png" />
+    <Resource Include="Resources\Icons\Paste.png" />
+    <Resource Include="Resources\Icons\Properties.png" />
+    <Resource Include="Resources\Icons\Redo.png" />
+    <Resource Include="Resources\Icons\Rename.png" />
+    <Resource Include="Resources\Icons\Save.png" />
+    <Resource Include="Resources\Icons\SaveAll.png" />
+    <Resource Include="Resources\Icons\SelectAll.png" />
+    <Resource Include="Resources\Icons\SolutionExplorer.png" />
+    <Resource Include="Resources\Icons\Split.png" />
+    <Resource Include="Resources\Icons\Undo.png" />
+    <Resource Include="SolutionControls\Explorer\ExplorerCommands.xaml" />
+    <Resource Include="SolutionControls\Explorer\ExplorerResources.xaml" />
+    <Resource Include="SolutionControls\ToolBar\ToolBarCommands.xaml" />
+    <Resource Include="SolutionControls\ToolBar\ToolBarResources.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="5.3.0">
@@ -38,6 +118,8 @@
     </PackageReference>
     <PackageReference Include="Custom-Controls-Library-Debug" Version="1.0.5" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
     <PackageReference Include="Custom-Controls-Library" Version="1.0.5" Condition="'$(Configuration)|$(Platform)'!='Debug|x64'" />
+    <PackageReference Include="XamlConverterLibrary-Debug" Version="1.0.5" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <PackageReference Include="XamlConverterLibrary" Version="1.0.5" Condition="'$(Configuration)|$(Platform)'!='Debug|x64'" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,6 +137,13 @@
     <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
+
+  <Target Name="_ResolveCopyLocalNuGetPackagePdbsAndXml" Condition="$(CopyLocalLockFileAssemblies) == true" AfterTargets="ResolveReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).pdb')" Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)' != '' And Exists('%(RootDir)%(Directory)%(Filename).pdb') " />
+      <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')" Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)' != '' And Exists('%(RootDir)%(Directory)%(Filename).xml') " />
+    </ItemGroup>
+  </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(SolutionDir)'!='*Undefined*'">
     <Exec Command="if exist &quot;$(SolutionDir)updatecommit.bat&quot; call &quot;$(SolutionDir)updatecommit.bat&quot; &quot;$(SolutionDir)&quot; &quot;$(TargetPath)&quot;" />

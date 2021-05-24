@@ -1,5 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
+    using SolutionControls;
+
     /// <summary>
     /// Represents the event data for folder created completion event.
     /// </summary>

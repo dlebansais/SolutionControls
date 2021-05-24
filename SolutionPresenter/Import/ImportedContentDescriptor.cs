@@ -1,4 +1,6 @@
-﻿namespace CustomControls
+﻿using SolutionControls;
+
+namespace SolutionPresenter
 {
     /// <summary>
     /// Represents the content of an imported object.

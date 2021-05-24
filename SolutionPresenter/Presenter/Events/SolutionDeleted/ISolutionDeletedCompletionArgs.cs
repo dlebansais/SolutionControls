@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     /// <summary>
     /// Represents the event data for a solution deleted completion event.

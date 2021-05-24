@@ -1,16 +1,16 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
-    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using System.Threading;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
     using System.Windows.Threading;
+    using SolutionControlsInternal.Properties;
 
     /// <summary>
     /// Represents a control displaying the status of a solution.

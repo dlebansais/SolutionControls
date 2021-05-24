@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     /// <summary>
     /// Represents the event data for an error focused completion event.

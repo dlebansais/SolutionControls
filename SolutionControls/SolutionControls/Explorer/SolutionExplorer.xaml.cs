@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System;
     using System.Collections;
@@ -15,6 +15,7 @@
     using System.Windows.Input;
     using System.Windows.Media;
     using System.Windows.Threading;
+    using CustomControls;
     using UndoRedo;
 
     /// <summary>
@@ -158,7 +159,7 @@
         /// </summary>
         /// <param name="selectedItems">The selected items.</param>
         /// <param name="canShowCommandList">The list of commands that can be shown.</param>
-        protected virtual void NotifyContextMenuOpened(IReadOnlyCollection<ITreeNodePath> selectedItems, ICollection<ExtendedRoutedCommand> canShowCommandList)
+        protected virtual void NotifyContextMenuOpened(IReadOnlyCollection<ITreeNodePath> selectedItems, ICollection<CustomControls.ExtendedRoutedCommand> canShowCommandList)
         {
             ContextMenuOpenedEventArgs Args = new ContextMenuOpenedEventArgs(ContextMenuOpenedEvent, selectedItems, canShowCommandList);
             RaiseEvent(Args);
@@ -1105,23 +1106,23 @@
         /// </summary>
         public void TriggerRename()
         {
-            if (Keyboard.FocusedElement is ExtendedTreeViewItemBase AsItemBase)
+            if (Keyboard.FocusedElement is CustomControls.ExtendedTreeViewItemBase AsItemBase)
             {
                 DependencyObject RootObject = VisualTreeHelper.GetChild(AsItemBase, 0);
-                if (FindEditableTextBlock(RootObject) is EditableTextBlock Ctrl)
+                if (FindEditableTextBlock(RootObject) is CustomControls.EditableTextBlock Ctrl)
                     Ctrl.IsEditing = true;
             }
         }
 
-        private EditableTextBlock? FindEditableTextBlock(DependencyObject rootObject)
+        private CustomControls.EditableTextBlock? FindEditableTextBlock(DependencyObject rootObject)
         {
-            if (rootObject is EditableTextBlock AsEditableTextBlock)
+            if (rootObject is CustomControls.EditableTextBlock AsEditableTextBlock)
                 return AsEditableTextBlock;
 
             int Count = VisualTreeHelper.GetChildrenCount(rootObject);
             for (int i = 0; i < Count; i++)
             {
-                if (FindEditableTextBlock(VisualTreeHelper.GetChild(rootObject, i)) is EditableTextBlock ChildEdit)
+                if (FindEditableTextBlock(VisualTreeHelper.GetChild(rootObject, i)) is CustomControls.EditableTextBlock ChildEdit)
                     return ChildEdit;
             }
 
@@ -1351,17 +1352,17 @@
                     FirstIndex--;
 
                 for (int i = FirstIndex; i < LastIndex; i++)
-                    if (ContextMenuItems[i] is ExtendedToolBarMenuItem AsExtendedToolBarMenuItem)
+                    if (ContextMenuItems[i] is CustomControls.ExtendedToolBarMenuItem AsExtendedToolBarMenuItem)
                         AsExtendedToolBarMenuItem.CanShow = true;
             }
         }
 
-        private List<ExtendedToolBarMenuItem> GetAddDocumentMenuItemList(ItemsControl itemsCollection)
+        private List<CustomControls.ExtendedToolBarMenuItem> GetAddDocumentMenuItemList(ItemsControl itemsCollection)
         {
-            List<ExtendedToolBarMenuItem> Result = new List<ExtendedToolBarMenuItem>();
+            List<CustomControls.ExtendedToolBarMenuItem> Result = new List<CustomControls.ExtendedToolBarMenuItem>();
             foreach (object Item in itemsCollection.Items)
             {
-                if (Item is ExtendedToolBarMenuItem AsExtendedToolBarMenuItem)
+                if (Item is CustomControls.ExtendedToolBarMenuItem AsExtendedToolBarMenuItem)
                     if (AsExtendedToolBarMenuItem.Command is DocumentRoutedCommand)
                         Result.Add(AsExtendedToolBarMenuItem);
 
@@ -1372,12 +1373,12 @@
             return Result;
         }
 
-        private IList<ExtendedRoutedCommand> GetCanShowCommandList(ItemsControl itemsCollection)
+        private IList<CustomControls.ExtendedRoutedCommand> GetCanShowCommandList(ItemsControl itemsCollection)
         {
-            List<ExtendedRoutedCommand> Result = new List<ExtendedRoutedCommand>();
+            List<CustomControls.ExtendedRoutedCommand> Result = new List<CustomControls.ExtendedRoutedCommand>();
             foreach (object Item in itemsCollection.Items)
             {
-                if (Item is ExtendedToolBarMenuItem AsExtendedToolBarMenuItem)
+                if (Item is CustomControls.ExtendedToolBarMenuItem AsExtendedToolBarMenuItem)
                     if (AsExtendedToolBarMenuItem.CanShow)
                         if (AsExtendedToolBarMenuItem.Command is ExtendedRoutedCommand AsExtendedCommand)
                             Result.Add(AsExtendedCommand);
@@ -1389,7 +1390,7 @@
             return Result;
         }
 
-        private void HideMenuItems(ItemsControl itemsCollection, IList<ExtendedRoutedCommand> canShowCommandList)
+        private void HideMenuItems(ItemsControl itemsCollection, IList<CustomControls.ExtendedRoutedCommand> canShowCommandList)
         {
             foreach (object Item in itemsCollection.Items)
             {

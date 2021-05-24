@@ -1,8 +1,9 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System;
     using System.Diagnostics;
     using System.Globalization;
+    using SolutionControls;
     using SolutionPresenterInternal.Properties;
 
     /// <summary>

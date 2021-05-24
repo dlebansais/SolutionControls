@@ -1,10 +1,11 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System;
     using System.Diagnostics;
     using System.Windows;
     using System.Windows.Data;
     using System.Windows.Media;
+    using SolutionControls;
     using Xceed.Wpf.AvalonDock.Themes;
 
     /// <summary>

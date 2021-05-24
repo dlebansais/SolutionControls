@@ -1,5 +1,6 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
+    using SolutionControls;
     using System;
 
     /// <summary>

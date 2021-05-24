@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System;
     using System.Collections.Generic;
@@ -6,6 +6,7 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
+    using CustomControls;
 
     /// <summary>
     /// Represents the window for options of a solution.

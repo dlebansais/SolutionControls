@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System;
     using System.ComponentModel;
@@ -8,7 +8,7 @@
     /// <summary>
     /// Represents a node in a solution.
     /// </summary>
-    public interface ISolutionTreeNode : IExtendedTreeNode, INotifyPropertyChanged
+    public interface ISolutionTreeNode : CustomControls.IExtendedTreeNode, INotifyPropertyChanged
     {
         /// <summary>
         /// Gets the node path.
@@ -73,7 +73,7 @@
         /// <summary>
         /// Gets the node parent.
         /// </summary>
-        public IExtendedTreeNode? Parent { get; private set; }
+        public CustomControls.IExtendedTreeNode? Parent { get; private set; }
 
         /// <summary>
         /// Gets the node properties.
@@ -88,7 +88,7 @@
         /// <summary>
         /// Gets the item children.
         /// </summary>
-        public abstract IExtendedTreeNodeCollection Children { get; }
+        public abstract CustomControls.IExtendedTreeNodeCollection Children { get; }
         #endregion
 
         #region Client Interface
@@ -96,7 +96,7 @@
         /// Changes the node parent.
         /// </summary>
         /// <param name="newParent">The new parent.</param>
-        public void ChangeParent(IExtendedTreeNode newParent)
+        public void ChangeParent(CustomControls.IExtendedTreeNode newParent)
         {
             Parent = newParent;
         }

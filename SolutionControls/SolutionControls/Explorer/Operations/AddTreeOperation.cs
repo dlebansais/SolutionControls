@@ -1,6 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System.Collections.Generic;
+    using SolutionControlsInternal.Properties;
 
     /// <summary>
     /// Represents an add operation in a solution explorer tree.

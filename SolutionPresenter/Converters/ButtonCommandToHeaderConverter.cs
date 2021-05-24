@@ -5,6 +5,7 @@
     using System.Windows.Data;
     using System.Windows.Input;
     using CustomControls;
+    using SolutionControls;
 
     /// <summary>
     /// Represents a converter from a button command to a menu header.

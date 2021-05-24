@@ -3,7 +3,7 @@
     using System;
     using System.Globalization;
     using System.Windows.Data;
-    using CustomControls;
+    using SolutionControls;
 
     /// <summary>
     /// Represents a converter from status types to a theme background brush.

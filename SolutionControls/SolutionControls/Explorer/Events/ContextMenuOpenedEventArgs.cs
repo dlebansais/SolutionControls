@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,7 @@
         /// <param name="routedEvent">The event that occured.</param>
         /// <param name="selectedItems">Selected items to which the menu applies.</param>
         /// <param name="canShowCommandList">The list of commands that can be shown.</param>
-        public ContextMenuOpenedEventArgs(RoutedEvent routedEvent, IReadOnlyCollection<ITreeNodePath> selectedItems, ICollection<ExtendedRoutedCommand> canShowCommandList)
+        public ContextMenuOpenedEventArgs(RoutedEvent routedEvent, IReadOnlyCollection<ITreeNodePath> selectedItems, ICollection<CustomControls.ExtendedRoutedCommand> canShowCommandList)
             : base(routedEvent)
         {
             if (selectedItems == null)
@@ -42,7 +42,7 @@
         /// </summary>
         /// <param name="command">The command.</param>
         /// <returns>True if the command applies; otherwise, false.</returns>
-        public virtual bool ContainsCommand(ExtendedRoutedCommand command)
+        public virtual bool ContainsCommand(CustomControls.ExtendedRoutedCommand command)
         {
             return CanShowCommandList.Contains(command);
         }
@@ -51,12 +51,12 @@
         /// Removes a command from the list of commands that can be shown.
         /// </summary>
         /// <param name="command">The command.</param>
-        public virtual void RemoveCommand(ExtendedRoutedCommand command)
+        public virtual void RemoveCommand(CustomControls.ExtendedRoutedCommand command)
         {
             CanShowCommandList.Remove(command);
         }
 
-        private ICollection<ExtendedRoutedCommand> CanShowCommandList;
+        private ICollection<CustomControls.ExtendedRoutedCommand> CanShowCommandList;
         #endregion
     }
 }

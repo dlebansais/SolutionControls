@@ -1,9 +1,10 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System;
     using System.Globalization;
     using System.Windows;
     using System.Windows.Input;
+    using CustomControls;
 
     /// <summary>
     /// Contains a set of tools for documents.

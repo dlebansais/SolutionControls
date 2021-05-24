@@ -1,7 +1,8 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Windows;
     using System.Windows.Controls;
+    using SolutionControls;
 
     /// <summary>
     /// Represents a selector for solution presenter panes.

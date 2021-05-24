@@ -1,5 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
+    using SolutionControls;
+
     /// <summary>
     /// Represents an error during compilation.
     /// </summary>

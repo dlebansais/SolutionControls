@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     /// <summary>
     /// Represents the path to a root folder.

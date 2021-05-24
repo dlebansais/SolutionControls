@@ -1,6 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Windows;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for a solution selected event.

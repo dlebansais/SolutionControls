@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     /// <summary>
     /// Represents the properties of a tree node.

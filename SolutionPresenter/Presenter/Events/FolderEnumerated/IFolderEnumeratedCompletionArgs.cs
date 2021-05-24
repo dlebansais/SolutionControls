@@ -1,6 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Collections.Generic;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for folder enumerated completion event.

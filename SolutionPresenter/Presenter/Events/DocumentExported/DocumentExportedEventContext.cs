@@ -1,6 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Collections.Generic;
+    using SolutionControls;
 
     /// <summary>
     /// Represents a context for the <see cref="DocumentExportedEventArgs"/> event data.

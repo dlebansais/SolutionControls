@@ -1,13 +1,14 @@
-﻿<UserControl x:Class="CustomControls.SolutionStatusBar"
+﻿<UserControl x:Class="SolutionControls.SolutionStatusBar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:conv="clr-namespace:Converters"
+             xmlns:conv="clr-namespace:Converters;assembly=XamlConverterLibrary"
+             xmlns:localconv="clr-namespace:Converters"
              xmlns:res="clr-namespace:SolutionControlsInternal.Properties"
-             xmlns:ctrl="clr-namespace:CustomControls">
+             xmlns:ctrl="clr-namespace:SolutionControls">
     <UserControl.Resources>
-        <conv:StatusTypesToThemeBackgroundBrushConverter x:Key="convStatusTypesToThemeBackgroundBrush"/>
-        <conv:StatusTypesToThemeForegroundBrushConverter x:Key="convStatusTypesToThemeForegroundBrush"/>
-        <conv:DoubleToObjectConverter x:Key="convDoubleToObject"/>
+        <localconv:StatusTypesToThemeBackgroundBrushConverter x:Key="convStatusTypesToThemeBackgroundBrush"/>
+        <localconv:StatusTypesToThemeForegroundBrushConverter x:Key="convStatusTypesToThemeForegroundBrush"/>
+        <localconv:DoubleToObjectConverter x:Key="convDoubleToObject"/>
         <conv:BooleanToObjectConverter x:Key="convBooleanToObject"/>
         <CompositeCollection x:Key="VisibleHidden">
             <Visibility>Visible</Visibility>

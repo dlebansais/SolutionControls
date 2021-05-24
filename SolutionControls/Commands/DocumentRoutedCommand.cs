@@ -1,11 +1,11 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System.Windows.Media;
 
     /// <summary>
     /// Represents a routed command for documents.
     /// </summary>
-    public class DocumentRoutedCommand : ExtendedRoutedCommand
+    public class DocumentRoutedCommand : CustomControls.ExtendedRoutedCommand
     {
         #region Init
         /// <summary>

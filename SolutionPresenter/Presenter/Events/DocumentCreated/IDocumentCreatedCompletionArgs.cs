@@ -1,5 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
+    using SolutionControls;
+
     /// <summary>
     /// Represents the event data for a document created completion event.
     /// </summary>

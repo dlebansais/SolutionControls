@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     /// <summary>
     /// Represents a context for the <see cref="SolutionTreeLoadedEventArgs"/> event data.

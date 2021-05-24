@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System;
     using System.Collections.Generic;
@@ -14,7 +14,9 @@
     using System.Windows.Input;
     using System.Windows.Media;
     using System.Windows.Threading;
+    using CustomControls;
     using Microsoft.Win32;
+    using SolutionControls;
     using UndoRedo;
     using Xceed.Wpf.AvalonDock.Controls;
     using Xceed.Wpf.AvalonDock.Layout;

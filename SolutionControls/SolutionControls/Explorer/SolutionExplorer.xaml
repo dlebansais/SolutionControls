@@ -1,15 +1,14 @@
-﻿<UserControl x:Class="CustomControls.SolutionExplorer"
+﻿<UserControl x:Class="SolutionControls.SolutionExplorer"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:ctrl="CustomControlsLibrary"
-             xmlns:conv="clr-namespace:Converters"
              xmlns:res="clr-namespace:SolutionControlsInternal.Properties"
-             xmlns:app="clr-namespace:CustomControls">
+             xmlns:app="clr-namespace:SolutionControls">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/Solution Controls/Explorer/ExplorerCommands.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/Solution Controls/Explorer/ExplorerResources.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/SolutionControls/Explorer/ExplorerCommands.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/SolutionControls/Explorer/ExplorerResources.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>

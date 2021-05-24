@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     /// <summary>
     /// Represents an item in a solution.
@@ -29,7 +29,7 @@
         /// <summary>
         /// Gets the item children.
         /// </summary>
-        public override IExtendedTreeNodeCollection Children { get { return new SolutionTreeNodeCollection(Parent as ISolutionTreeNode); } }
+        public override CustomControls.IExtendedTreeNodeCollection Children { get { return new SolutionTreeNodeCollection(Parent as ISolutionTreeNode); } }
         #endregion
     }
 }

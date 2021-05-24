@@ -1,7 +1,8 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Windows;
     using System.Windows.Threading;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for document created event.

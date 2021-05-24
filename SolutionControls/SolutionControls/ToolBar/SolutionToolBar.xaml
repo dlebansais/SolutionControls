@@ -1,15 +1,15 @@
-﻿<UserControl x:Class="CustomControls.SolutionToolBar"
+﻿<UserControl x:Class="SolutionControls.SolutionToolBar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:app="clr-namespace:CustomControls"
+             xmlns:app="clr-namespace:SolutionControls"
              xmlns:res="clr-namespace:SolutionControlsInternal.Properties"
              xmlns:ctrl="CustomControlsLibrary"
              FocusManager.IsFocusScope="True">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/Solution Controls/Tool Bar/ToolBarCommands.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/Solution Controls/Tool Bar/ToolBarResources.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/SolutionControls/ToolBar/ToolBarCommands.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/SolutionControls;component/SolutionControls/ToolBar/ToolBarResources.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>

@@ -1,4 +1,4 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -6,7 +6,7 @@
     /// <summary>
     /// Represents a collection of tree nodes in a solution.
     /// </summary>
-    public interface ISolutionTreeNodeCollection : IList<ISolutionTreeNode>, IReadOnlyList<ISolutionTreeNode>, IExtendedTreeNodeCollection
+    public interface ISolutionTreeNodeCollection : IList<ISolutionTreeNode>, IReadOnlyList<ISolutionTreeNode>, CustomControls.IExtendedTreeNodeCollection
     {
         /// <summary>
         /// Gets the comparer for tree nodes.
@@ -55,7 +55,7 @@
         /// <summary>
         /// Gets the parent node.
         /// </summary>
-        public IExtendedTreeNode? Parent { get; }
+        public CustomControls.IExtendedTreeNode? Parent { get; }
 
         /// <summary>
         /// Gets the comparer for tree nodes.
@@ -104,7 +104,7 @@
         /// </summary>
         /// <param name="item">The object to locate in the <see cref="IList{IExtendedTreeNode}"/>.</param>
         /// <returns>The index of item if found in the list; otherwise, -1.</returns>
-        int IList<IExtendedTreeNode>.IndexOf(IExtendedTreeNode item)
+        int IList<CustomControls.IExtendedTreeNode>.IndexOf(CustomControls.IExtendedTreeNode item)
         {
             return IndexOf((ISolutionTreeNode)item);
         }
@@ -114,7 +114,7 @@
         /// </summary>
         /// <param name="index">The zero-based index at which item should be inserted.</param>
         /// <param name="item">The object to insert into the <see cref="IList{IExtendedTreeNode}"/>.</param>
-        void IList<IExtendedTreeNode>.Insert(int index, IExtendedTreeNode item)
+        void IList<CustomControls.IExtendedTreeNode>.Insert(int index, CustomControls.IExtendedTreeNode item)
         {
             Insert(index, (ISolutionTreeNode)item);
         }
@@ -124,7 +124,7 @@
         /// </summary>
         /// <param name="index">The zero-based index of the element to get or set.</param>
         /// <returns>The element at the specified index.</returns>
-        IExtendedTreeNode IList<IExtendedTreeNode>.this[int index]
+        CustomControls.IExtendedTreeNode IList<CustomControls.IExtendedTreeNode>.this[int index]
         {
             get { return this[index]; }
             set { this[index] = (ISolutionTreeNode)value; }
@@ -134,7 +134,7 @@
         /// Adds an item to the <see cref="ICollection{IExtendedTreeNode}"/>.
         /// </summary>
         /// <param name="item">The object to add to the <see cref="ICollection{IExtendedTreeNode}"/>.</param>
-        void ICollection<IExtendedTreeNode>.Add(IExtendedTreeNode item)
+        void ICollection<CustomControls.IExtendedTreeNode>.Add(CustomControls.IExtendedTreeNode item)
         {
             Add((ISolutionTreeNode)item);
         }
@@ -144,7 +144,7 @@
         /// </summary>
         /// <param name="item">The object to locate in the <see cref="ICollection{IExtendedTreeNode}"/>.</param>
         /// <returns>True if item is found in the <see cref="ICollection{IExtendedTreeNode}"/>; otherwise, False.</returns>
-        bool ICollection<IExtendedTreeNode>.Contains(IExtendedTreeNode item)
+        bool ICollection<CustomControls.IExtendedTreeNode>.Contains(CustomControls.IExtendedTreeNode item)
         {
             return Contains((ISolutionTreeNode)item);
         }
@@ -154,7 +154,7 @@
         /// </summary>
         /// <param name="array">The one-dimensional System.Array that is the destination of the elements copied from <see cref="ICollection{IExtendedTreeNode}"/>. The <see cref="System.Array"/> must have zero-based indexing.</param>
         /// <param name="arrayIndex">The zero-based index in array at which copying begins.</param>
-        void ICollection<IExtendedTreeNode>.CopyTo(IExtendedTreeNode[] array, int arrayIndex)
+        void ICollection<CustomControls.IExtendedTreeNode>.CopyTo(CustomControls.IExtendedTreeNode[] array, int arrayIndex)
         {
             CopyTo(array as ISolutionTreeNode[], arrayIndex);
         }
@@ -164,7 +164,7 @@
         /// </summary>
         /// <param name="item">The object to remove from the <see cref="ICollection{IExtendedTreeNode}"/>.</param>
         /// <returns>True if item was successfully removed from the <see cref="ICollection{IExtendedTreeNode}"/>; otherwise, false. This method also returns false if item is not found in the original <see cref="ICollection{IExtendedTreeNode}"/>.</returns>
-        bool ICollection<IExtendedTreeNode>.Remove(IExtendedTreeNode item)
+        bool ICollection<CustomControls.IExtendedTreeNode>.Remove(CustomControls.IExtendedTreeNode item)
         {
             return Remove((ISolutionTreeNode)item);
         }
@@ -182,7 +182,7 @@
         /// Returns an enumerator that iterates through the collection.
         /// </summary>
         /// <returns>An enumerator that can be used to iterate through the collection.</returns>
-        IEnumerator<IExtendedTreeNode> IEnumerable<IExtendedTreeNode>.GetEnumerator()
+        IEnumerator<CustomControls.IExtendedTreeNode> IEnumerable<CustomControls.IExtendedTreeNode>.GetEnumerator()
         {
             return GetEnumerator();
         }

@@ -1,6 +1,7 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Windows;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for a root properties request event.

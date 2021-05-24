@@ -1,10 +1,11 @@
-﻿namespace CustomControls
+﻿namespace SolutionControls
 {
     using System;
     using System.Collections;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
+    using CustomControls;
 
     /// <summary>
     /// Represents a control containing merged properties.

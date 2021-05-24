@@ -1,8 +1,9 @@
-﻿namespace CustomControls
+﻿namespace SolutionPresenter
 {
     using System.Collections.Generic;
     using System.Windows;
     using System.Windows.Threading;
+    using SolutionControls;
 
     /// <summary>
     /// Represents the event data for a import new item request event.
