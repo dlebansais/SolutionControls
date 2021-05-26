@@ -71,6 +71,7 @@
                 <CommandBinding Command="ApplicationCommands.Redo" CanExecute="CanRedo" Executed="OnRedo"/>
                 <CommandBinding Command="ApplicationCommands.Delete" CanExecute="CanDelete" Executed="OnDelete"/>
                 <CommandBinding Command="ApplicationCommands.SelectAll" CanExecute="CanSelectAll" Executed="OnSelectAll"/>
+                <CommandBinding Command="{StaticResource ChangeOptionsCommand}" CanExecute="CanChangeOptions" Executed="OnChangeOptions"/>
                 <CommandBinding Command="{StaticResource BuildSolutionCommand}" CanExecute="CanBuildSolution" Executed="OnBuildSolution"/>
                 <CommandBinding Command="{StaticResource ChangePropertiesCommand}" CanExecute="CanChangeProperties" Executed="OnChangeProperties"/>
                 <CommandBinding Command="{StaticResource ShowSolutionExplorerToolCommand}" CanExecute="CanShowSolutionExplorerTool" Executed="OnShowSolutionExplorerTool"/>

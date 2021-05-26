@@ -23,10 +23,16 @@
         /// <returns>The converted value.</returns>
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (values != null && values.Length > 2 && (values[0] is ICommand Command) && (values[1] is FrameworkElement Source) && (values[2] is string ApplicationName))
-                return GetItemToolTip(Command, Source, ApplicationName);
-            else
-                throw new ArgumentOutOfRangeException(nameof(values));
+            if (values != null && values.Length >= 3)
+            {
+                if (values[0] == DependencyProperty.UnsetValue)
+                    return null!;
+
+                if ((values[0] is ICommand Command) && (values[1] is FrameworkElement Source) && (values[2] is string ApplicationName))
+                    return GetItemToolTip(Command, Source, ApplicationName);
+            }
+
+            throw new ArgumentOutOfRangeException(nameof(values));
         }
 
         /// <summary>

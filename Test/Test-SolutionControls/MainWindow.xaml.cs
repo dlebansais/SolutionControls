@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using SolutionControls;
+using System.Windows;
 
 namespace TestControls
 {
@@ -10,6 +11,9 @@ namespace TestControls
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
+
+            ctrlExplorer.Root = null!;
         }
     }
 }

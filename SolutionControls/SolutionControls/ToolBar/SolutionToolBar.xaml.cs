@@ -164,6 +164,8 @@
         /// </summary>
         public SolutionToolBar()
         {
+            ExtendedToolBar ctrl = new ExtendedToolBar();
+
             InitializeComponent();
             InitDropDownLists();
         }

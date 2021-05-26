@@ -22,10 +22,16 @@
         /// <returns>The converted value.</returns>
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (values != null && values.Length > 1 && (values[0] is ICommand Command) && (values[1] is FrameworkElement Source))
-                return GetItemGestureText(Command, Source);
-            else
-                throw new ArgumentOutOfRangeException(nameof(values));
+            if (values != null && values.Length >= 2)
+            {
+                if (values[0] == DependencyProperty.UnsetValue)
+                    return null!;
+
+                if ((values[0] is ICommand Command) && (values[1] is FrameworkElement Source))
+                    return GetItemGestureText(Command, Source);
+            }
+
+            throw new ArgumentOutOfRangeException(nameof(values));
         }
 
         /// <summary>

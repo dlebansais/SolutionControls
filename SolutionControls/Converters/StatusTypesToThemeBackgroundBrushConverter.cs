@@ -2,6 +2,7 @@
 {
     using System;
     using System.Globalization;
+    using System.Windows;
     using System.Windows.Data;
     using SolutionControls;
 
@@ -20,14 +21,20 @@
         /// <returns>The converted value.</returns>
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (values != null && values.Length > 1 && (values[0] is StatusType) && (values[1] is IStatusTheme))
+            if (values != null && values.Length >= 2)
             {
-                StatusType StatusType = (StatusType)values[0];
-                IStatusTheme Theme = (IStatusTheme)values[1];
-                return Theme.GetBackgroundBrush(StatusType);
+                if (values[0] == DependencyProperty.UnsetValue)
+                    return null!;
+
+                if ((values[0] is StatusType) && (values[1] is IStatusTheme))
+                {
+                    StatusType StatusType = values[0] is StatusType ? (StatusType)values[0] : StatusType.Normal;
+                    IStatusTheme Theme = (IStatusTheme)values[1];
+                    return Theme.GetBackgroundBrush(StatusType);
+                }
             }
-            else
-                throw new ArgumentOutOfRangeException(nameof(values));
+
+            throw new ArgumentOutOfRangeException(nameof(values));
         }
 
         /// <summary>

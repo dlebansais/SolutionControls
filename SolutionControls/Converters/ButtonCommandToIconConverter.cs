@@ -43,9 +43,15 @@
 
             switch (command)
             {
+                case LocalizedRoutedCommand AsLocalizedRoutedCommand:
+                    if (AsLocalizedRoutedCommand.IconKey.Length > 0)
+                        ItemIcon = new Image() { Source = AsLocalizedRoutedCommand.ImageSource, Width = 16.0, Height = 16.0 };
+                    else
+                        ItemIcon = new Image() { Width = 16.0, Height = 16.0 };
+                    break;
+
                 case ExtendedRoutedCommand AsExtendedRoutedCommand:
-                    Image Icon = new Image() { Source = AsExtendedRoutedCommand.ImageSource, Width = 16.0, Height = 16.0 };
-                    ItemIcon = Icon;
+                    ItemIcon = new Image() { Source = AsExtendedRoutedCommand.ImageSource, Width = 16.0, Height = 16.0 };
                     break;
 
                 case RoutedUICommand AsUICommand:

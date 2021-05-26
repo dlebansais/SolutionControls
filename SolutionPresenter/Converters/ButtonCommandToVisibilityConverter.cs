@@ -23,24 +23,30 @@
         /// <returns>The converted value.</returns>
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (values != null && values.Length > 1 && (values[0] is ICommand Command) && (values[1] is bool CanShow))
+            if (values != null && values.Length >= 2)
             {
-                bool IsVisible;
+                if (values[0] == DependencyProperty.UnsetValue)
+                    return null!;
 
-                if (values.Length > 2)
+                if ((values[0] is ICommand Command) && (values[1] is bool CanShow))
                 {
-                    if (values[2] is IDocument ActiveDocument)
-                        IsVisible = GetItemVisibility(Command, ActiveDocument);
-                    else
-                        throw new ArgumentOutOfRangeException(nameof(values));
-                }
-                else
-                    IsVisible = true;
+                    bool IsVisible;
 
-                return CanShow && IsVisible ? Visibility.Visible : Visibility.Collapsed;
+                    if (values.Length > 2)
+                    {
+                        if (values[2] is IDocument ActiveDocument)
+                            IsVisible = GetItemVisibility(Command, ActiveDocument);
+                        else
+                            throw new ArgumentOutOfRangeException(nameof(values));
+                    }
+                    else
+                        IsVisible = true;
+
+                    return CanShow && IsVisible ? Visibility.Visible : Visibility.Collapsed;
+                }
             }
-            else
-                throw new ArgumentOutOfRangeException(nameof(values));
+
+            throw new ArgumentOutOfRangeException(nameof(values));
         }
 
         /// <summary>

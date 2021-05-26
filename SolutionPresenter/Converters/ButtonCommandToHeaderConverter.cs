@@ -2,6 +2,7 @@
 {
     using System;
     using System.Globalization;
+    using System.Windows;
     using System.Windows.Data;
     using System.Windows.Input;
     using CustomControls;
@@ -22,16 +23,24 @@
         /// <returns>The converted value.</returns>
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (values != null && values.Length > 0 && (values[0] is ICommand Command))
-                if (values.Length > 1)
+            if (values != null && values.Length >= 1)
+            {
+                if (values[0] == DependencyProperty.UnsetValue)
+                    return null!;
+
+                if (values[0] is ICommand Command)
                 {
-                    IDocument ActiveDocument = (IDocument)values[1];
-                    return GetItemHeader(Command, ActiveDocument);
+                    if (values.Length > 1)
+                    {
+                        IDocument ActiveDocument = (IDocument)values[1];
+                        return GetItemHeader(Command, ActiveDocument);
+                    }
+                    else
+                        return GetItemHeader(Command, null);
                 }
-                else
-                    return GetItemHeader(Command, null);
-            else
-                throw new ArgumentOutOfRangeException(nameof(values));
+            }
+
+            throw new ArgumentOutOfRangeException(nameof(values));
         }
 
         /// <summary>

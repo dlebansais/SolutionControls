@@ -49,7 +49,7 @@
     <ctrl:LocalizedRoutedCommand x:Key="ShowPropertiesToolCommand" Reference="{StaticResource SolutionToolBarReference}"
                                  HeaderKey="ToolBarPropertiesTool" IconKey="Properties.png" ToolTipKey="ToolBarPropertiesToolToolTip"/>
     <ctrl:LocalizedRoutedCommand x:Key="ResetLayoutCommand" Reference="{StaticResource SolutionToolBarReference}"
-                                 HeaderKey="ToolBarResetLayout" ToolTipKey="ToolBarResetLayoutToolTip"/>
+                                 HeaderKey="ToolBarResetLayout" IconKey="Properties.png" ToolTipKey="ToolBarResetLayoutToolTip"/>
     <ctrl:LocalizedRoutedCommand x:Key="SplitWindowCommand" Reference="{StaticResource SolutionToolBarReference}"
                                  HeaderKey="ToolBarSplit" IconKey="Split.png" ToolTipKey="ToolBarSplitToolTip"/>
     <ctrl:LocalizedRoutedCommand x:Key="RemoveWindowSplitCommand" Reference="{StaticResource SolutionToolBarReference}"
