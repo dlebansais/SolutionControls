@@ -123,7 +123,7 @@
                     break;
             }
 
-            if (Key.Length > 0 && !gestureTable.ContainsKey(Key))
+            if (Key != null && Key.Length > 0 && !gestureTable.ContainsKey(Key))
                 if (GestureToText(binding.Gesture, translator, out string GestureText))
                     gestureTable.Add(Key, GestureText);
         }

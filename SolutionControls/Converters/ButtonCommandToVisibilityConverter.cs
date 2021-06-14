@@ -36,6 +36,8 @@
                     {
                         if (values[2] is IDocument ActiveDocument)
                             IsVisible = GetItemVisibility(Command, ActiveDocument);
+                        else if (values[2] == null)
+                            IsVisible = true;
                         else
                             throw new ArgumentOutOfRangeException(nameof(values));
                     }

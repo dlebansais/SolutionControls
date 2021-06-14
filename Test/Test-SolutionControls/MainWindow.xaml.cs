@@ -1,8 +1,7 @@
-﻿using SolutionControls;
-using System.Windows;
-
-namespace TestControls
+﻿namespace TestControls
 {
+    using System.Windows;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -12,8 +11,6 @@ namespace TestControls
         {
             InitializeComponent();
             DataContext = this;
-
-            ctrlExplorer.Root = null!;
         }
     }
 }

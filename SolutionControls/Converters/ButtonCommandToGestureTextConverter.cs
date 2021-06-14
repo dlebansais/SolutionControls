@@ -24,7 +24,7 @@
         {
             if (values != null && values.Length >= 2)
             {
-                if (values[0] == DependencyProperty.UnsetValue)
+                if (values[0] == DependencyProperty.UnsetValue || values[1] == null)
                     return null!;
 
                 if ((values[0] is ICommand Command) && (values[1] is FrameworkElement Source))

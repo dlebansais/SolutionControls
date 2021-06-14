@@ -384,18 +384,23 @@
 
         #region Properties
         /// <summary>
-        /// Gets or sets the solution root.
+        /// Gets the solution root.
         /// </summary>
         public ISolutionRoot Root
         {
             get
             {
+                /*
                 if (RootInternal != null)
                     return RootInternal;
                 else
                     throw new InvalidOperationException();
+                */
+#pragma warning disable CS8603 // Possible null reference return.
+                return RootInternal;
+#pragma warning restore CS8603 // Possible null reference return.
             }
-            set
+            private set
             {
                 if (RootInternal != value)
                 {
@@ -561,7 +566,7 @@
             {
                 List<IFolderPath> Result = new List<IFolderPath>();
 
-                IList VisibleItems = treeviewSolutionExplorer.VisibleItems;
+                IList VisibleItems = treeviewSolutionExplorer.VisibleItems();
                 foreach (ISolutionTreeNode Item in VisibleItems)
                 {
                     if (Item == Root)
@@ -586,7 +591,7 @@
                 IList SelectedItems = treeviewSolutionExplorer.SelectedItems;
                 if (SelectedItems.Count > 0)
                 {
-                    IList VisibleItems = treeviewSolutionExplorer.VisibleItems;
+                    IList VisibleItems = treeviewSolutionExplorer.VisibleItems();
                     int Index = VisibleItems.IndexOf(SelectedItems[SelectedItems.Count - 1]);
                     if (Index + 1 < VisibleItems.Count)
                         Index++;
@@ -1462,9 +1467,10 @@
             DropCompletedEventArgs Args = (DropCompletedEventArgs)e;
 
             if (Args.DropDestinationItem is ISolutionFolder AsFolder)
-                if (!Args.IsCopy && Args.ItemList != null)
+                if (Args.Effect != DragDropEffects.Copy)
                 {
-                    foreach (ISolutionTreeNode Item in Args.ItemList)
+                    // foreach (ISolutionTreeNode Item in Args.ItemList)
+                    foreach (ISolutionTreeNode Item in Args.CloneList)
                     {
                         ITreeNodePath ItemPath = Item.Path;
                         ISolutionFolder? ItemParent = Item.Parent as ISolutionFolder;
